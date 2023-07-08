@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 
+    - favicon
+  -->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+
+    <!-- 
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- 
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Candidate Search</title>
+  </head>
+  <body id="top">
+    <header class="header" data-header>
+      <div class="container">
+        <a href="#" class="logo">JobSync</a>
+
+        <nav class="navbar container" data-navbar>
+          <ul class="navbar-list">
+            <li>
+              <a href="index.html" class="navbar-link" data-nav-link>Home</a>
+            </li>
+
+            <li>
+              <a href="index.html" class="navbar-link" data-nav-link
+                >Services</a
+              >
+            </li>
+
+            <li>
+              <a href="index.html" class="navbar-link" data-nav-link>Project</a>
+            </li>
+
+            <li>
+              <a href="index.html" class="navbar-link" data-nav-link
+                >About Us</a
+              >
+            </li>
+
+            <li>
+              <a href="index.html" class="navbar-link" data-nav-link>Blog</a>
+            </li>
+
+            <li>
+              <a href="candidate_search.html" class="navbar-link" data-nav-link
+                >Tech For Hire</a
+              >
+            </li>
+            <li>
+              <a href="#contact" class="navbar-link" data-nav-link
+                >Contact Us</a
+              >
+            </li>
+
+            <li>
+              <a href="login.html" class="navbar-link">Login</a>
+            </li>
+
+            <li>
+              <a href="#" class="btn btn-primary">Get Started</a>
+            </li>
+          </ul>
+        </nav>
+
+        <button
+          class="nav-toggle-btn"
+          aria-label="Toggle menu"
+          data-nav-toggler
+        >
+          <ion-icon name="menu-outline" class="open"></ion-icon>
+          <ion-icon name="close-outline" class="close"></ion-icon>
+        </button>
+      </div>
+    </header>
+    <section class="section hero" id="home" aria-label="hero">
+      <div class="container">
+        <div class="hero-content">
+          <p class="hero-subtitle">JobSync Marketing Agency</p>
+
+          <h1>
+            <span class="h1 hero-title">Hire the Right person.</span>
+
+            <p class="section-text">
+              Our platform provides employers with rich data insights into the
+              employee experience, whilst assisting them in meeting their legal
+              obligations. By investing in creating a psychologically safe
+              workplace, organisations can see enormous benefits.
+            </p>
+          </h1>
+        </div>
+        <figure class="hero-banner">
+          <img
+            src="./assets/images/expand-home-img.png"
+            width="720"
+            height="673"
+            alt="hero banner"
+            class="w-100"
+          />
+        </figure>
+      </div>
+    </section>
+
+    <!-- CTA -->
+
+    <section
+      class="section cta"
+      aria-label="cta"
+      style="background-image: url('./assets/images/cta-bg.jpg')"
+    >
+      <div class="container">
+        <p class="cta-subtitle">So What is Next?</p>
+
+        <h2 class="h2 section-title">Shall we begin? Let's get to Work!</h2>
+
+        <a href="#" class="btn btn-secondary">Get Started</a>
+      </div>
+    </section>
+
+    <section
+      class="section candidate-search"
+      id="candidate-search"
+      aria-label="candidate-search"
+    >
+      <div class="container">
+        <h2 class="h2 section-title">Candidate Search</h2>
+
+        <form class="search-form" id="search-form">
+          <div class="form-group">
+            <label for="location">Location:</label>
+            <select id="location" name="location">
+              <option value="" selected disabled>Select location</option>
+              <option value="Sydney">Sydney</option>
+              <option value="San Francisco">San Francisco</option>
+              <option value="New York">New York</option>
+              <option value="London">London</option>
+              <option value="Sydney">Sydney</option>
+              <option value="Brazile">Brazile</option>
+              <option value="Melbourne">Melbourne</option>
+              <option value="S.Korea">S.Korea</option>
+              <option value="N.Korea">N.Korea</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="job-role">Job Role:</label>
+            <select id="tech-professionals" name="tech-professionals">
+              <option value="" selected disabled>
+                Select tech professionals
+              </option>
+              <option value="iOS Developers">iOS Developers</option>
+              <option value="Android Developers">Android Developers</option>
+              <option value="Front-end Developers">Front-end Developers</option>
+              <option value="Back-end Developers">Back-end Developers</option>
+              <option value="Others">Others</option>
+              <option value="not-sure">Not sure</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="developer-count"
+              >How many developers are you looking to hire?</label
+            >
+            <select id="developer-count" name="developer-count">
+              <option value="" selected disabled>
+                Select number of developers
+              </option>
+              <option value="1-4">1 - 4</option>
+              <option value="5-10">5 - 10</option>
+              <option value="more-than-10">More than 10</option>
+              <option value="not-sure">Not sure</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="tech-professionals"
+              >What tech professionals are you looking to hire ?</label
+            >
+          </div>
+
+          <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+
+        <div class="candidate-list" id="candidate-list">
+          <div class="candidate-card">
+            <img
+              src="./assets/images/people/3.png"
+              alt="Candidate Avatar"
+              class="candidate-avatar"
+            />
+            <div class="candidate-details">
+              <h3 class="h3 candidate-name">John Doe</h3>
+              <p class="candidate-job-title">Frontend Developer</p>
+              <p class="candidate-location">San Francisco, CA</p>
+              <a href="#" class="btn btn-secondary">View Profile</a>
+            </div>
+          </div>
+          <div class="candidate-card">
+            <img
+              src="./assets/images/people/2.png"
+              alt="Candidate Avatar"
+              class="candidate-avatar"
+            />
+            <div class="candidate-details">
+              <h3 class="h3 candidate-name">Jane Smith</h3>
+              <p class="candidate-job-title">Backend Developer</p>
+              <p class="candidate-location">New York, NY</p>
+              <a href="#" class="btn btn-secondary">View Profile</a>
+            </div>
+          </div>
+          <div class="candidate-card">
+            <img
+              src="./assets/images/people/1.png"
+              alt="Candidate Avatar"
+              class="candidate-avatar"
+            />
+            <div class="candidate-details">
+              <h3 class="h3 candidate-name">Alex Johnson</h3>
+              <p class="candidate-job-title">Full Stack Developer</p>
+              <p class="candidate-location">London, UK</p>
+              <a href="#" class="btn btn-secondary">View Profile</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact -->
+    <section class="section contact" id="contact" aria-label="contact">
+      <div class="container">
+        <h2 class="h2 section-title">How do we get in touch?</h2>
+
+        <p class="section-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+
+        <form action="" class="contact-form">
+          <div class="input-wrapper">
+            <input
+              type="text"
+              name="name"
+              aria-label="name"
+              placeholder="Your name*"
+              required
+              class="input-field"
+            />
+
+            <input
+              type="email"
+              name="email_address"
+              aria-label="email"
+              placeholder="Email address*"
+              required
+              class="input-field"
+            />
+          </div>
+
+          <div class="input-wrapper">
+            <input
+              type="text"
+              name="subject"
+              aria-label="subject"
+              placeholder="Company "
+              class="input-field"
+            />
+
+            <input
+              type="number"
+              name="phone"
+              aria-label="phone"
+              placeholder="Phone number"
+              class="input-field"
+            />
+          </div>
+
+          <textarea
+            name="message"
+            aria-label="message"
+            placeholder="Your message...*"
+            required
+            class="input-field"
+          ></textarea>
+
+          <div class="checkbox-wrapper">
+            <input
+              type="checkbox"
+              name="terms_and_policy"
+              id="terms"
+              required
+              class="checkbox"
+            />
+
+            <label for="terms" class="label">
+              Accept
+              <a href="#" class="label-link">Terms of Services</a> and
+              <a href="#" class="label-link">Privacy Policy</a>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+
+        <ul class="contact-list">
+          <li class="contact-item">
+            <div class="contact-card">
+              <div class="card-icon">
+                <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+              </div>
+
+              <div class="card-content">
+                <h3 class="h3 card-title">Mail Here</h3>
+
+                <a href="mailto:gsejal28@mail.com" class="card-link"
+                  >hello@email.com</a
+                >
+                <a href="mailto:info@email.com" class="card-link"
+                  >info@email.com</a
+                >
+              </div>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="contact-card">
+              <div class="card-icon">
+                <ion-icon name="map-outline" aria-hidden="true"></ion-icon>
+              </div>
+
+              <div class="card-content">
+                <h3 class="h3 card-title">Visit Here</h3>
+
+                <address class="card-address">
+                  27 Division St, New York,<br />
+                  NY 10002, USA
+                </address>
+              </div>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="contact-card">
+              <div class="card-icon">
+                <ion-icon name="headset-outline" aria-hidden="true"></ion-icon>
+              </div>
+
+              <div class="card-content">
+                <h3 class="h3 card-title">Call Here</h3>
+
+                <a href="tel:+1234567890" class="card-link">+123 456 7890</a>
+                <a href="tel:+2414524526" class="card-link">+241 452 4526</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="copyright">
+          &copy; 2023 Made with &hearts; By
+          <a href="#" class="copyright-link">Sejal Gupta</a>
+        </p>
+      </div>
+    </footer>
+    <!-- 
+    - #BACK TO TOP
+  -->
+
+    <a
+      href="#top"
+      aria-label="back to top"
+      data-back-top-btn
+      class="back-top-btn"
+    >
+      <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+    </a>
+    <!-- 
+    - custom js link
+  -->
+    <script src="./assets/js/script.js" defer></script>
+
+    <!-- 
+    - ionicon link
+  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script>
+      // JavaScript code for candidate search functionality
+
+      // Get the form and candidate list elements
+      const searchForm = document.getElementById("search-form");
+      const candidateList = document.getElementById("candidate-list");
+
+      // Event listener for form submission
+      searchForm.addEventListener("submit", function (e) {
+        e.preventDefault(); // Prevent form submission
+
+        // Get the search criteria values
+        const location = document.getElementById("location").value;
+        const jobRole = document.getElementById("job-role").value;
+
+        // Perform the candidate search based on the criteria (replace with your actual search logic)
+        const fetchedCandidates = searchCandidates(location, jobRole);
+
+        // Display the fetched candidates in the candidate list
+        displayCandidates(fetchedCandidates);
+      });
+
+      // Function to simulate fetching candidates based on search criteria
+      function searchCandidates(location, jobRole) {
+        // Replace with your actual implementation to fetch candidates from a database or API
+        // Return an array of fetched candidates matching the search criteria
+        // Example:
+        const fetchedCandidates = [
+          {
+            name: "John Doe",
+            location: "New York",
+            jobRole: "Software Engineer",
+          },
+          {
+            name: "Jane Smith",
+            location: "San Francisco",
+            jobRole: "UI Designer",
+          },
+          // Add more fetched candidates as needed
+        ];
+
+        return fetchedCandidates;
+      }
+
+      // Function to display the fetched candidates in the candidate list
+      function displayCandidates(candidates) {
+        // Clear the existing candidate list
+        candidateList.innerHTML = "";
+
+        // Loop through the candidates and create HTML elements to display them
+        candidates.forEach((candidate) => {
+          const candidateItem = document.createElement("div");
+          candidateItem.classList.add("candidate-item");
+
+          const candidateName = document.createElement("h3");
+          candidateName.textContent = candidate.name;
+          candidateItem.appendChild(candidateName);
+
+          const candidateDetails = document.createElement("p");
+          candidateDetails.textContent = `Location: ${candidate.location}, Job Role: ${candidate.jobRole}`;
+          candidateItem.appendChild(candidateDetails);
+
+          candidateList.appendChild(candidateItem);
+        });
+      }
+    </script>
+  </body>
+</html>
